@@ -5,6 +5,7 @@ import { CUiKitConfigArgs, CUiKitConfig } from '../config/c-ui-kit-config';
 
 @NgModule({
   declarations: [ ButtonDirective ],
+  exports: [ ButtonDirective ],
   imports: [ CommonModule ]
 })
 export class CUiKitModule {
