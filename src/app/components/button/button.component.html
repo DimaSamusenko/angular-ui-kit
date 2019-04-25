@@ -1,0 +1,20 @@
+<button #btn
+  [type]="type"
+  [disabled]="disabled"
+  class="btn"
+  [ngClass]="{
+    'btn-default': color === 'default',
+    'btn-primary': color === 'primary',
+    'btn-secondary': color === 'secondary',
+    'btn-info': color === 'info',
+    'btn-light': color === 'light',
+    'btn-dark': color === 'dark',
+    'btn-warning': color === 'warning',
+    'btn-success': color === 'success',
+    'btn-danger': color === 'danger',
+    'btn-link': color === 'link'
+  }">
+  <i [class]="icon" *ngIf="icon && !loading"></i>
+  <c-spinner *ngIf="icon && loading" [color]="color"></c-spinner>
+  <ng-content *ngIf="!loading"></ng-content>
+</button>

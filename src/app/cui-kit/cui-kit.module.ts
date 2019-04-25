@@ -1,12 +1,12 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonDirective } from '../directives/button.directive';
 import { CUiKitConfigArgs, CUiKitConfig } from '../config/c-ui-kit-config';
-import { AlertDirective } from '../directives/alert.directive';
+import { ButtonComponent } from '../components/button/button.component';
+import { SpinnerComponent } from '../components/spinner/spinner.component';
 
 @NgModule({
-  declarations: [ ButtonDirective, AlertDirective ],
-  exports: [ ButtonDirective, AlertDirective ],
+  declarations: [ ButtonComponent, SpinnerComponent ],
+  exports: [ ButtonComponent, SpinnerComponent ],
   imports: [ CommonModule ]
 })
 export class CUiKitModule {

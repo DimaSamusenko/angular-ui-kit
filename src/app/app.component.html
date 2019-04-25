@@ -1,5 +1,12 @@
 <main>
-  <div><button [cButton]="loading" type="button">test</button></div>
+  <div>
+    <c-button
+      type="button"
+      [disabled]="disabled"
+      [loading]="loading"
+      data-icon="fa fa-plus"
+      color="warning">button</c-button>
+  </div>
   <div>
     <div cAlert data-dismissible="true">
       test alert

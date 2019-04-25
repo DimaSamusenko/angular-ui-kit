@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  disabled = false;
   loading = false;
   title = 'angular-ui-kit';
   ngOnInit() {
     setInterval(() => {
-      this.loading = !this.loading;
+      /*this.disabled = !this.disabled;
+      this.loading = !this.loading;*/
     }, 2000);
   }
 }
