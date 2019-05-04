@@ -9,10 +9,14 @@ export class AppComponent implements OnInit {
   disabled = false;
   loading = false;
   title = 'angular-ui-kit';
+  name = '';
   ngOnInit() {
     setInterval(() => {
       /*this.disabled = !this.disabled;
       this.loading = !this.loading;*/
     }, 2000);
+  }
+  submitHandler() {
+    console.log('Form submit');
   }
 }

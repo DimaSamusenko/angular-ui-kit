@@ -13,8 +13,10 @@
     'btn-success': color === 'success',
     'btn-danger': color === 'danger',
     'btn-link': color === 'link'
-  }">
-  <i [class]="icon" *ngIf="icon && !loading"></i>
-  <c-spinner *ngIf="icon && loading" [color]="color"></c-spinner>
-  <ng-content *ngIf="!loading"></ng-content>
+  }"
+  (click)="submit()">
+  <i [class]="icon" class="btn-icon" *ngIf="icon && !loading"></i>
+  <c-spinner class="btn-spinner" *ngIf="icon && loading"
+    [color]="color"></c-spinner>
+  <ng-content class="btn-label" *ngIf="!loading"></ng-content>
 </button>

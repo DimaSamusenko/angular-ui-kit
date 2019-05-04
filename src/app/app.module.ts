@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CUiKitModule } from './cui-kit/cui-kit.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CUiKitModule } from './cui-kit/cui-kit.module';
     CUiKitModule.forRoot({
       foo: 'bar'
     }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

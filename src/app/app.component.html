@@ -1,16 +1,25 @@
 <main>
-  <div>
-    <c-button
-      type="button"
-      [disabled]="disabled"
-      [loading]="loading"
-      data-icon="fa fa-plus"
-      color="warning">button</c-button>
-  </div>
-  <div>
-    <div cAlert data-dismissible="true">
-      test alert
+  <form name="first" #myForm="ngForm">
+    <div>
+      <input type="text"
+        name="name"
+        [(ngModel)]="name" />
     </div>
-  </div>
+    <div>
+      <c-button
+        type="button"
+        [disabled]="disabled"
+        [loading]="loading"
+        data-icon="fa fa-plus"
+        color="warning"
+        [form]="myForm"
+        [action]="submitHandler">button</c-button>
+    </div>
+    <div>
+      <div cAlert data-dismissible="true">
+        test alert
+      </div>
+    </div>
+  </form>
 </main>
 
